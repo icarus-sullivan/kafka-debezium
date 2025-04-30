@@ -22,7 +22,7 @@ docker-compose up -d
 
 1. Wait for services to initialize (check logs if needed).
 
-2. Register a Debezium Postgres source connector (use REST API):
+2. Register a Debezium Postgres source connector (example users replication):
 
   ```
   curl -X POST http://localhost:8083/connectors \
@@ -55,4 +55,5 @@ docker-compose up -d
 > 🔍 Notes:
 > - pgoutput is the plugin used with logical replication.
 > - Debezium automatically creates the replication slot and publication if configured.
-> - You can view Kafka topics at http://localhost:8080 (Kafka UI).
+> - You can view Kafka topics at http://kakfa.localhost (Kafka UI).
+> - You can view Debezium connectors at http://debezium.localhost (Debezium UI).
